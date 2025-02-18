@@ -29,8 +29,9 @@
     </article>
     <div>
       <h2>Abstract</h2> 
-      <p class="justified"> Conventional speech synthesis techniques have made significant strides towards achieving human-like performance. However, the domain of audiobook speech synthesis still presents notable challenges. On one hand, the speech in audiobooks exhibits rich prosody expressiveness, posing substantial difficulties in prosody modeling. On the other hand, the reader of audiobooks uses different voices to perform dialogues of different characters, which has been inadequately explored in existing speech synthesis methods. To address the first challenge, we integrate discourse-scale prosody modeling into the conventional autoencoder-based framework and introduce generative adversarial networks (GANs) for prosody code prediction. Regarding the second challenge, we further explore a character voice encoder based on the pretrained speaker verification model, integrating it into our proposed method. Experimental results validate that the proposed method enhances the prosodic expressiveness of synthesized audiobook speech. Moreover, it demonstrates the capacity to produce distinctive voices for different audiobook characters without compromising the naturalness of the synthesized speech. </p>
+      <p class="justified"> Conventional speech synthesis techniques have made significant strides towards achieving human-like performance. However, the domain of audiobook speech synthesis still presents notable challenges. On one hand, the speech in audiobooks exhibits rich prosody expressiveness, posing substantial difficulties in prosody modeling. On the other hand, the reader of audiobooks uses different voices to perform dialogues of different characters, which has been inadequately explored in existing speech synthesis methods. To address the first challenge, we integrate discourse-scale prosody modeling into the conventional autoencoder-based framework and introduce generative adversarial networks (GANs) for phoneme-level prosody code prediction. Regarding the second challenge, we further explore a character voice encoder based on the pretrained speaker verification model, integrating it into our proposed method. Experimental results validate that the proposed method enhances the prosodic expressiveness of synthesized audiobook speech. Moreover, it demonstrates the capacity to produce distinctive voices for different audiobook characters without compromising the naturalness of the synthesized speech. </p>
       <b>This page is for research demonstration purposes only.
+      <span style="color: red; font-weight: bold;">More demos synthesized with the latest configuration (proposed+) will be released soon.</span>
     </div>
     <div>
     <h2>Model Overview</h2>
@@ -39,7 +40,7 @@
     <div>
       <h2>Demos</h2>
       <hr>
-      <h3>Effectiveness of prosody modeling</h3></a>
+      <h3>Comparative experiments</h3></a>
       <table>
         <tbody>
         <tr>
@@ -56,46 +57,72 @@
             沈冷只是把自己的身体压在那，仅仅靠着自身的重量而已。
           </td>
           <td class="text">
-            “不是，我不是让你说媒，我的意思是啊，女大不由爹。”
+            最终他多看了两眼孟长安手中的小猎刀，于是沈冷嘴角多了些老母亲般的微笑。
           </td>
           <td class="text">
-            “若真的招你做御厨，你带我做配菜可好？”
-          </td>
-          <td class="text">
-            “朕好像已经有差不多七八年没来过这了。”
+            其中一个老妇取出个瓶子，倒出来几粒药丸，分给其他人。
           </td>
         </tr>
         <tr>
-          <td class="first-col">FS2-prosody(SV)</td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_fs2.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_fs2.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_fs2.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_fs2.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_fs2.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_fs2.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">proposed(SV)</td>
+          <td class="first-col">proposed</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_pp.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">proposed+</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_ppp.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">FastSpeech 2</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_fs2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_fs2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_fs2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_fs2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_fs2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">GST</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_gst.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_gst.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_gst.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_gst.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_gst.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">VITS2</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_vits2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">StyleTTS</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_st.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">ground truth</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_gt.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_gt.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_gt.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_gt.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_gt.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_gt.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/00_gt.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/09_gt.wav"></audio></td>
         </tr>
         </tbody>
       </table>
       <hr>
-      <h3>Ablation study of prosody modeling</h3></a>
+      <h3>Ablation study on BERT and GAN</h3></a>
       <table>
         <tbody>
         <tr>
@@ -120,7 +147,7 @@
 
         </tr>
         <tr>
-          <td class="first-col">proposed(SV)</td>
+          <td class="first-col">proposed</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp.wav"></audio></td>
@@ -128,7 +155,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o GAN</td>
+          <td class="first-col">proposed w/o GAN</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_woGAN.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_woGAN.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_woGAN.wav"></audio></td>
@@ -136,15 +163,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_woGAN.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o discourse</td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_woD.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_woD.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_woD.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/14_pp_woD.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_woD.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">proposed(SV) w/o BERT</td>
+          <td class="first-col">proposed w/o BERT</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_woBERT.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_woBERT.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_woBERT.wav"></audio></td>
@@ -152,7 +171,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_woBERT.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o FML</td>
+          <td class="first-col">proposed w/o FML</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_woFML.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_woFML.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_woFML.wav"></audio></td>
@@ -160,7 +179,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_woFML.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o condition</td>
+          <td class="first-col">proposed w/o condition</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_woCond.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_woCond.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_woCond.wav"></audio></td>
@@ -168,9 +187,60 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_woCond.wav"></audio></td>
         </tr>
         </tbody>
+      </table>      
+      <h3>Ablation study on discourse-scale modeling</h3></a>
+      <table>
+        <tbody>
+        <tr>
+          <td>
+            <h4>Text</h4>
+          </td>
+          <td class="text">
+            风声，雨声，呼啸而过，张小凡却只觉得，自己的脑海中一片空白。
+          </td>
+          <td class="text">
+            二人向前又走了几步，曾书书忙着端详怀里的小灰，张小凡却似是满腹心思，沉默不语。
+          </td>
+          <td class="text">
+            这时，这个草庙之内，在电光强烈照耀之下，已如白昼。
+          </td>
+          <td class="text">
+            又走了一会，但见林中古木参天，阴气阵阵，看来已到树林深处。
+          </td>
+          <td class="text">
+            但见他细眉方脸，眉目儒雅，与刚才那些凶狠粗豪的魔教中人大不相同。
+          </td>
+
+        </tr>
+        <tr>
+          <td class="first-col">proposed (K=5)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/14_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">proposed (K=3)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_k3.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_k3.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_k3.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/14_pp_k3.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_k3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">proposed (K=0)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_k0.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_k0.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_k0.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/14_pp_k0.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_k0.wav"></audio></td>
+        </tr>
+
+        </tbody>
       </table>
       <hr>
-      <h3>Ablation study of voice encoder</h3></a>
+      <h3>Ablation study of character voice encoder (CVE)</h3></a>
       <table>
         <tbody>
         <tr>
@@ -197,7 +267,7 @@
           </td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV)</td>
+          <td class="first-col">proposed (SV)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_pp.wav"></audio></td>
@@ -206,7 +276,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o voice encoder</td>
+          <td class="first-col">proposed w/o CVE (SV)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/01_pp_woVE.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/02_pp_woVE.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/03_pp_woVE.wav"></audio></td>
@@ -263,14 +333,6 @@
           </td>
         </tr>
         <tr>
-          <td class="first-col">single voice</td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/07_pp.wav"></audio></td>
-          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/08_pp.wav"></audio></td>
-        </tr>
-        <tr>
           <td class="first-col">ground truth</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_gt.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_gt.wav"></audio></td>
@@ -279,7 +341,15 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/08_gt.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">ground truth voice</td>
+          <td class="first-col">single voice (SV)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/07_pp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/08_pp.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">ground-truth voice (GV)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_gt.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_gt.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_gt.wav"></audio></td>
@@ -287,7 +357,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/08_pp_gt.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">hero (x0.5)</td>
+          <td class="first-col">voice control: hero (x0.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_hero_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_hero_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_hero_0.5.wav"></audio></td>
@@ -296,7 +366,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">hero (x1.0)</td>
+          <td class="first-col">voice control: hero (x1.0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_hero_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_hero_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_hero_1.wav"></audio></td>
@@ -305,7 +375,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">hero (x1.5)</td>
+          <td class="first-col">voice control: hero (x1.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_hero_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_hero_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_hero_1.5.wav"></audio></td>
@@ -314,7 +384,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">heroine (x0.5)</td>
+          <td class="first-col">voice control: heroine (x0.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_heroine_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_heroine_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_heroine_0.5.wav"></audio></td>
@@ -323,7 +393,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">heroine (x1.0)</td>
+          <td class="first-col">voice control: heroine (x1.0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_heroine_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_heroine_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_heroine_1.wav"></audio></td>
@@ -332,7 +402,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">heroine (x1.5)</td>
+          <td class="first-col">voice control: heroine (x1.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_heroine_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_heroine_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_heroine_1.5.wav"></audio></td>
@@ -341,7 +411,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">emperor (x0.5)</td>
+          <td class="first-col">voice control: emperor (x0.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_emperor_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_emperor_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_emperor_0.5.wav"></audio></td>
@@ -350,7 +420,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">emperor (x1.0)</td>
+          <td class="first-col">voice control: emperor (x1.0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_emperor_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_emperor_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_emperor_1.wav"></audio></td>
@@ -359,7 +429,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">emperor (x1.5)</td>
+          <td class="first-col">voice control: emperor (x1.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_emperor_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_emperor_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_emperor_1.5.wav"></audio></td>
@@ -368,7 +438,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">empress (x0.5)</td>
+          <td class="first-col">voice control: empress (x0.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_empress_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_empress_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_empress_0.5.wav"></audio></td>
@@ -377,7 +447,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">empress (x1.0)</td>
+          <td class="first-col">voice control: empress (x1.0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_empress_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_empress_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_empress_1.wav"></audio></td>
@@ -386,7 +456,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">empress (x1.5)</td>
+          <td class="first-col">voice control: empress (x1.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_empress_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_empress_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_empress_1.5.wav"></audio></td>
@@ -395,7 +465,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">elder (x0.5)</td>
+          <td class="first-col">voice control: elder (x0.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_elder_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_elder_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_elder_0.5.wav"></audio></td>
@@ -404,7 +474,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">elder (x1.0)</td>
+          <td class="first-col">voice control: elder (x1.0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_elder_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_elder_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_elder_1.wav"></audio></td>
@@ -413,7 +483,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">elder (x1.5)</td>
+          <td class="first-col">voice control: elder (x1.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_elder_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_elder_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_elder_1.5.wav"></audio></td>
@@ -422,7 +492,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">child (x0.5)</td>
+          <td class="first-col">voice control: child (x0.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_child_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_child_0.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_child_0.5.wav"></audio></td>
@@ -431,7 +501,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">child (x1.0)</td>
+          <td class="first-col">voice control: child (x1.0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_child_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_child_1.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_child_1.wav"></audio></td>
@@ -440,7 +510,7 @@
         </tr>
         
         <tr>
-          <td class="first-col">child (x1.5)</td>
+          <td class="first-col">voice control: child (x1.5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/04_pp_child_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/05_pp_child_1.5.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/06_pp_child_1.5.wav"></audio></td>
@@ -476,7 +546,7 @@
 
         </tr>
         <tr>
-          <td class="first-col">proposed(SV)</td>
+          <td class="first-col">proposed (K=5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp.wav"></audio></td>
@@ -484,7 +554,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o discourse</td>
+          <td class="first-col">proposed (K=0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_DwoD.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_DwoD.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_DwoD.wav"></audio></td>
@@ -492,7 +562,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_DwoD.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o BERT</td>
+          <td class="first-col">proposed w/o BERT (K=5)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_DwoBERT.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_DwoBERT.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_DwoBERT.wav"></audio></td>
@@ -500,7 +570,7 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_pp_DwoBERT.wav"></audio></td>
         </tr>
         <tr>
-          <td class="first-col">proposed(SV) w/o discourse and BERT</td>
+          <td class="first-col">proposed w/o BERT (K=0)</td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/11_pp_DwoDandB.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/12_pp_DwoDandB.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/13_pp_DwoDandB.wav"></audio></td>
