@@ -37,8 +37,8 @@
     <img src="1.png" height="400">
     </div>
     <div>
-      <h2>Demos</h2>
       <hr>
+      <h2>Demos (Prosody Modeling)</h2>
       <h3>Comparative experiments</h3></a>
       <table>
         <tbody>
@@ -120,7 +120,7 @@
         </tr>
         </tbody>
       </table>
-      <hr>
+      <br>
       <h3>Ablation study on BERT and GAN</h3></a>
       <table>
         <tbody>
@@ -186,7 +186,8 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_ppp_woCond.wav"></audio></td>
         </tr>
         </tbody>
-      </table>      
+      </table>
+      <br>
       <h3>Ablation study on discourse-scale modeling</h3></a>
       <table>
         <tbody>
@@ -209,7 +210,6 @@
           <td class="text">
             但见他细眉方脸，眉目儒雅，与刚才那些凶狠粗豪的魔教中人大不相同。
           </td>
-
         </tr>
         <tr>
           <td class="first-col">proposed+ (K=5)</td>
@@ -235,10 +235,80 @@
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/14_ppp_k0.wav"></audio></td>
           <td><audio controls style="width: 190px;" preload="none"><source src="wavs/15_ppp_k0.wav"></audio></td>
         </tr>
-
         </tbody>
       </table>
       <hr>
+      <h2>Demos (Character Voice Controlling)</h2>
+      <h3>Comparative experiments</h3></a>
+      <table>
+        <tbody>
+        <tr>
+          <td>
+            <h4>Text</h4>
+          </td>
+          
+          
+          
+          
+          
+          <td class="text">
+            “水师将军沈冷代提督庄雍借万钧三艘。”（hero）
+          </td>
+          <td class="text">
+            “披上就走，甲胃到我军中再给你一套，军务急迫，不可耽搁。”（heroine）
+          </td>
+          <td class="text">
+            “大学士你只管吩咐，让我们怎么做都行，只要保得住白家。”（emperor）
+          </td>
+          <td class="text">
+            “那件事不是小罪，这二十年也算修行了。”（empress）
+          </td>
+          <td class="text">
+            “有了都廷尉大人的消息尽快联络我。”（elder）
+          </td>
+          <td class="text">
+            “呃实话实说吧，他俩都是我收养的孤儿。”（child）
+          </td>
+        </tr>
+        <tr>
+          <td class="first-col">Reference wavs</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="ref/hero.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="ref/heroine.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="ref/emperor.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="ref/empress.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="ref/elder.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="ref/child.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">proposed+ (MV)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/21_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/25_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/22_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/23_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/24_ppp.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/26_ppp.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">VITS2-CVE (MV)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/21_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/25_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/22_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/23_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/24_vits2.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/26_vits2.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">StyleTTS (MV)</td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/21_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/25_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/22_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/23_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/24_st.wav"></audio></td>
+          <td><audio controls style="width: 190px;" preload="none"><source src="wavs/26_st.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
       <h3>Ablation study of character voice encoder (CVE)</h3></a>
       <table>
         <tbody>
@@ -285,9 +355,9 @@
         </tr>
         </tbody>
       </table>
-      <hr>
+      <br>
       <h3>Effectiveness of character voice control (with coefficient mentioned in Section 3.5)</h3></a>
-      <h4>Reference wav</h4>
+      <h4>Reference wavs</h4>
       <table>
         <tbody>
         <tr>
@@ -520,6 +590,7 @@
         </tbody>
       </table>
       <hr>
+      <h2>Demos (Duration Modeling)</h2>
       <h3>Ablation study of duration modeling</h3></a>
       <table>
         <tbody>
